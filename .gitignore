@@ -1,0 +1,7 @@
+node_modules/
+logs/
+config/production.json
+.idea/
+public/uploads
+npm-debug.log
+config/

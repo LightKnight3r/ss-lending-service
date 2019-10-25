@@ -1,0 +1,61 @@
+{
+  "name": "sanship-handle-order",
+  "version": "1.0.0",
+  "description": "Handle new order from user in system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node index.js --presets es2015"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/tuanhm/sanship-handle-order.git"
+  },
+  "author": "tuanhm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/tuanhm/sanship-handle-order/issues"
+  },
+  "homepage": "https://gitlab.com/tuanhm/sanship-handle-order#README",
+  "dependencies": {
+    "@google/maps": "^0.3.1",
+    "apn": "^2.1.3",
+    "async": "2.1.4",
+    "bluebird": "^3.5.4",
+    "body-parser": "^1.17.0",
+    "cachegoose": "git+https://github.com/tuanhm93/cachegoose.git",
+    "config": "1.24.0",
+    "connect-multiparty": "^2.1.0",
+    "express": "^4.14.1",
+    "express-validation": "^1.0.2",
+    "fs.extra": "^1.3.2",
+    "geolib": "^2.0.24",
+    "joi": "^10.6.0",
+    "joi-objectid": "^2.0.0",
+    "jsoncompress": "git+https://github.com/tuanhm93/node-jsoncompress.git",
+    "lodash": "4.17.2",
+    "moment": "^2.24.0",
+    "mongoose": "4.7.1",
+    "ms": "0.7.2",
+    "node-gcm": "^0.14.4",
+    "nodemailer": "^3.1.1",
+    "redis": "2.6.3",
+    "request-promise": "^4.2.1",
+    "shuffle-array": "^1.0.1",
+    "socket.io": "^2.0.3",
+    "sse-nodejs": "git+https://github.com/tuanhm93/Server-Sent-Events-Nodejs.git",
+    "util": "^0.10.3",
+    "uuid": "^3.2.1",
+    "validator": "^7.1.0",
+    "winston": "2.3.0",
+    "winston-daily-rotate-file": "1.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015": "^6.22.0",
+    "eslint": "^3.15.0",
+    "eslint-plugin-babel": "^4.0.1"
+  }
+}
