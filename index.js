@@ -8,6 +8,10 @@ const Logger = require('./lib/logger')
 // Global variables
 global.logger = Logger(`${__dirname}/logs`);
 global.dirIndex = __dirname;
+const multer  = require('multer');
+const upload = multer({
+  dest: 'public/uploads'
+});
 
 // Middleware
 const bodyParser = require('body-parser')
@@ -29,8 +33,10 @@ app.use(bodyParser.json());
 app.post('/api/v1.0/bank/get-bank-codes', tokenToUserMiddleware, BankHandle.getBankCodes);
 app.post('/api/v1.0/lending/get-config',tokenToUserMiddleware, LendingHandle.getConfig);
 app.post('/api/v1.0/lending/send-profile', tokenToUserMiddleware, LendingHandle.sendProfile);
-app.post('/api/v1.0/lending/get-status',tokenToUserMiddleware, LendingHandle.getStatus);
+app.post('/api/v1.0/lending/get-status', tokenToUserMiddleware,LendingHandle.getStatus);
 app.post('/api/v1.0/lending/cancel', tokenToUserMiddleware, LendingHandle.cancel);
+app.post('/api/v1.0/lending/upload-bill', tokenToUserMiddleware, LendingHandle.uploadBill);
+app.post('/api/v1.0/lending/upload-video', LendingHandle.uploadVideo);
 app.get('/api/v2.0/lending/callback', LendingHandle.callback);
 
 const port = process.env.PORT || _.get(config, 'port', 3000);
