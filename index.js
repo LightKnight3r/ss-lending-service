@@ -35,8 +35,8 @@ app.post('/api/v1.0/lending/get-config',tokenToUserMiddleware, LendingHandle.get
 app.post('/api/v1.0/lending/send-profile', tokenToUserMiddleware, LendingHandle.sendProfile);
 app.post('/api/v1.0/lending/get-status', tokenToUserMiddleware,LendingHandle.getStatus);
 app.post('/api/v1.0/lending/cancel', tokenToUserMiddleware, LendingHandle.cancel);
-app.post('/api/v1.0/lending/upload-bill', tokenToUserMiddleware, LendingHandle.uploadBill);
-app.post('/api/v1.0/lending/upload-video', LendingHandle.uploadVideo);
+app.post('/api/v1.0/lending/upload-bill',tokenToUserMiddleware, LendingHandle.uploadBill);
+app.post('/api/v1.0/lending/upload-video', upload.single('fileUpload'),LendingHandle.uploadVideo);
 app.get('/api/v2.0/lending/callback', LendingHandle.callback);
 
 const port = process.env.PORT || _.get(config, 'port', 3000);
