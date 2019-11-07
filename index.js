@@ -36,7 +36,8 @@ app.post('/api/v1.0/lending/send-profile', tokenToUserMiddleware, LendingHandle.
 app.post('/api/v1.0/lending/get-status', tokenToUserMiddleware,LendingHandle.getStatus);
 app.post('/api/v1.0/lending/cancel', tokenToUserMiddleware, LendingHandle.cancel);
 app.post('/api/v1.0/lending/upload-bill',tokenToUserMiddleware, LendingHandle.uploadBill);
-app.post('/api/v1.0/lending/get-video-guide', LendingHandle.getVideoGuide);
+app.post('/api/v1.0/lending/get-video-guide', tokenToUserMiddleware, LendingHandle.getVideoGuide);
+app.post('/api/v1.0/lending/check-service-available', tokenToUserMiddleware, LendingHandle.checkServiceAvailable);
 app.post('/api/v1.0/lending/upload-video', upload.single('fileUpload'),LendingHandle.uploadVideo);
 app.get('/api/v2.0/lending/callback', LendingHandle.callback);
 
