@@ -31,14 +31,14 @@ app.use(bodyParser.json());
 
 //feedback
 app.post('/api/v1.0/bank/get-bank-codes', tokenToUserMiddleware, BankHandle.getBankCodes);
-app.post('/api/v1.0/lending/get-config',tokenToUserMiddleware, LendingHandle.getConfig);
-app.post('/api/v1.0/lending/send-profile', tokenToUserMiddleware, LendingHandle.sendProfile);
-app.post('/api/v1.0/lending/get-status', tokenToUserMiddleware,LendingHandle.getStatus);
-app.post('/api/v1.0/lending/cancel', tokenToUserMiddleware, LendingHandle.cancel);
-app.post('/api/v1.0/lending/upload-bill',tokenToUserMiddleware, LendingHandle.uploadBill);
-app.post('/api/v1.0/lending/get-video-guide', tokenToUserMiddleware, LendingHandle.getVideoGuide);
-app.post('/api/v1.0/lending/check-service-available', tokenToUserMiddleware, LendingHandle.checkServiceAvailable);
-app.post('/api/v1.0/lending/upload-video', upload.single('fileUpload'),LendingHandle.uploadVideo);
+app.post('/api/v1.0/mount/get-config',tokenToUserMiddleware, LendingHandle.getConfig);
+app.post('/api/v1.0/mount/send-profile', tokenToUserMiddleware, LendingHandle.sendProfile);
+app.post('/api/v1.0/mount/get-status', tokenToUserMiddleware,LendingHandle.getStatus);
+app.post('/api/v1.0/mount/cancel', tokenToUserMiddleware, LendingHandle.cancel);
+app.post('/api/v1.0/mount/upload-bill',tokenToUserMiddleware, LendingHandle.uploadBill);
+app.post('/api/v1.0/mount/get-video-guide', tokenToUserMiddleware, LendingHandle.getVideoGuide);
+app.post('/api/v1.0/mount/check-service-available', tokenToUserMiddleware, LendingHandle.checkServiceAvailable);
+app.post('/api/v1.0/mount/upload-video', upload.single('fileUpload'),LendingHandle.uploadVideo);
 app.get('/api/v2.0/lending/callback', LendingHandle.callback);
 
 const port = process.env.PORT || _.get(config, 'port', 3000);
