@@ -40,6 +40,7 @@ app.post('/api/v1.0/mount/get-video-guide', tokenToUserMiddleware, LendingHandle
 app.post('/api/v1.0/mount/check-service-available', tokenToUserMiddleware, LendingHandle.checkServiceAvailable);
 app.post('/api/v1.0/mount/upload-video', upload.single('fileUpload'),LendingHandle.uploadVideo);
 app.get('/api/v2.0/lending/callback', LendingHandle.callback);
+app.get('/api/v2.0/lending/answer', LendingHandle.lendingRequest);
 
 const port = process.env.PORT || _.get(config, 'port', 3000);
 server.listen(port, () => {
