@@ -41,6 +41,10 @@ app.post('/api/v1.0/mount/check-service-available', tokenToUserMiddleware, Lendi
 app.post('/api/v1.0/mount/upload-video', upload.single('fileUpload'),LendingHandle.uploadVideo);
 app.get('/api/v2.0/lending/callback', LendingHandle.callback);
 app.get('/api/v2.0/lending/answer', LendingHandle.lendingRequest);
+app.post('/api/v2.0/lending/get-request', LendingHandle.getRequest);
+app.post('/api/v2.0/lending/approve', LendingHandle.approve);
+app.post('/api/v2.0/lending/upload-contact', LendingHandle.uploadContact);
+app.post('/api/v2.0/mount/check-status',tokenToUserMiddleware, LendingHandle.checkStatus);
 
 const port = process.env.PORT || _.get(config, 'port', 3000);
 server.listen(port, () => {
