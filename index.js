@@ -45,6 +45,7 @@ app.post('/api/v2.0/lending/get-request', LendingHandle.getRequest);
 app.post('/api/v2.0/lending/approve', LendingHandle.approve);
 app.post('/api/v2.0/lending/upload-contact', LendingHandle.uploadContact);
 app.post('/api/v2.0/mount/check-status',tokenToUserMiddleware, LendingHandle.checkStatus);
+app.post('/api/v1.0/mount/check-phone', tokenToUserMiddleware, LendingHandle.checkPhone);
 
 const port = process.env.PORT || _.get(config, 'port', 3000);
 server.listen(port, () => {
