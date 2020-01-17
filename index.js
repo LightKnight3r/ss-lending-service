@@ -20,6 +20,7 @@ const tokenToUserMiddleware = require('./lib/middleware/tokenToUser');
 // Handle routes
 const BankHandle = require('./lib/routes/bank');
 const LendingHandle = require('./lib/routes/lending')
+const LendingHandleV2 = require('./lib/routes/lendingV2')
 
 // Start server
 const app = express();
@@ -40,6 +41,7 @@ app.post('/api/v1.0/mount/get-video-guide', tokenToUserMiddleware, LendingHandle
 app.post('/api/v1.0/mount/check-service-available', tokenToUserMiddleware, LendingHandle.checkServiceAvailable);
 app.post('/api/v1.0/mount/upload-video', upload.single('fileUpload'),LendingHandle.uploadVideo);
 app.get('/api/v2.0/lending/callback', LendingHandle.callback);
+app.get('/api/v2.1/lending/callback', LendingHandleV2.callback);
 app.get('/api/v2.0/lending/answer', LendingHandle.lendingRequest);
 app.post('/api/v2.0/lending/get-request', LendingHandle.getRequest);
 app.post('/api/v2.0/lending/approve', LendingHandle.approve);
