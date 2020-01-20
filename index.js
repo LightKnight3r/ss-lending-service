@@ -44,6 +44,7 @@ app.get('/api/v2.0/lending/callback', LendingHandle.callback);
 app.get('/api/v2.1/lending/callback', LendingHandleV2.callback);
 app.get('/api/v2.0/lending/answer', LendingHandle.lendingRequest);
 app.post('/api/v2.0/lending/get-request', LendingHandle.getRequest);
+app.post('/api/v2.0/lending/get-request-for-rider', LendingHandle.getRequestForRider);
 app.post('/api/v2.0/lending/approve', LendingHandle.approve);
 app.post('/api/v2.0/lending/approve-rider', LendingHandle.approveRider);
 app.post('/api/v2.0/lending/upload-contact', LendingHandle.uploadContact);
