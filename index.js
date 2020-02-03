@@ -35,6 +35,8 @@ app.post('/api/v1.0/bank/get-bank-codes', tokenToUserMiddleware, BankHandle.getB
 app.post('/api/v1.0/mount/get-config',tokenToUserMiddleware, LendingHandle.getConfig);
 app.post('/api/v1.0/mount/send-profile', tokenToUserMiddleware, LendingHandle.sendProfile);
 app.post('/api/v1.0/mount/get-status', tokenToUserMiddleware,LendingHandle.getStatus);
+app.post('/api/v2.0/mount/get-config', tokenToUserMiddleware,LendingHandleV2.getConfig);
+app.post('/api/v2.0/mount/check-condition', tokenToUserMiddleware,LendingHandleV2.checkMerchantCondition);
 app.post('/api/v1.0/mount/cancel', tokenToUserMiddleware, LendingHandle.cancel);
 app.post('/api/v1.0/mount/upload-bill',tokenToUserMiddleware, LendingHandle.uploadBill);
 app.post('/api/v1.0/mount/get-video-guide', tokenToUserMiddleware, LendingHandle.getVideoGuide);
