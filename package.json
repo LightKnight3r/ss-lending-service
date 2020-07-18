@@ -34,7 +34,7 @@
     "joi": "^10.6.0",
     "joi-objectid": "^2.0.0",
     "jsoncompress": "git+https://github.com/tuanhm93/node-jsoncompress.git",
-    "lodash": "4.17.2",
+    "lodash": "4.17.19",
     "moment": "^2.24.0",
     "mongoose": "4.7.1",
     "ms": "0.7.2",
